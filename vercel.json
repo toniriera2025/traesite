@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "video-upload/index.ts": {
-      "memory": 512,
-      "timeout": 120
-    }
-  },
   "rewrites": [
     {
       "source": "/((?!api/).*)",
