@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "TONI RIERA",
+    "subtitle": "Creating the impossible",
+    "cta_button": "View My Work",
+    "scroll_down": "Scroll Down",
+    "scroll_indicator": "Scroll"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Creative Vision",
+    "description": "Leveraging extensive experience in graphic design and visual composition, I craft compelling, high-quality visuals as a creative retoucher specialized in advanced AI-driven image and video creation.",
+    "cta_button": "Learn More"
+  },
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "subtitle": "FEATURED WORKS",
+    "view_project": "View Project",
+    "view_all": "View All Projects",
+    "categories": {
+      "all": "All",
+      "branding": "Branding",
+      "digital": "Digital Art",
+      "photography": "Photography",
+      "video": "Video"
+    }
+  },
+  "testimonials": {
+    "title": "What Clients Say",
+    "subtitle": "Client Testimonials"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's Work Together",
+    "description": "Ready to bring your vision to life? Let's discuss your next project."
+  },
+  "stats": {
+    "section_title": "Transforming Ideas into Reality",
+    "projects_completed": "Projects Completed",
+    "happy_clients": "Happy Clients",
+    "years_experience": "Years Experience",
+    "awards_won": "Awards Won",
+    "projects_description": "Creative campaigns brought to life",
+    "clients_description": "Agencies and brands worldwide"
+  }
+}

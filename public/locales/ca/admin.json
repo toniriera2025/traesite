@@ -1,0 +1,72 @@
+{
+  "title": "Panell d'Administració",
+  "dashboard": "Panell de Control",
+  "overview": "Resum",
+  "statistics": "Estadístiques",
+  "quick_actions": "Accions Ràpides",
+  "recent_activity": "Activitat Recent",
+  "system_status": "Estat del Sistema",
+  "projects": {
+    "title": "Projectes",
+    "subtitle": "Gestiona els teus projectes de portafoli",
+    "add_project": "Afegir Projecte",
+    "edit_project": "Editar Projecte",
+    "delete_project": "Eliminar Projecte",
+    "project_title": "Títol del Projecte",
+    "project_description": "Descripció del Projecte",
+    "project_slug": "URL Slug",
+    "main_image": "Imatge Principal",
+    "additional_images": "Imatges Addicionals",
+    "client_name": "Nom del Client",
+    "project_category": "Categoria",
+    "project_status": "Estat",
+    "is_featured": "Projecte Destacat",
+    "sort_order": "Ordre de Classificació",
+    "save_project": "Desar Projecte",
+    "save_draft": "Desar com a Esborrany",
+    "publish_project": "Publicar Projecte",
+    "archive_project": "Arxivar Projecte",
+    "duplicate_project": "Duplicar Projecte",
+    "project_saved": "Projecte desat correctament",
+    "project_deleted": "Projecte eliminat correctament",
+    "delete_confirmation": "Estàs segur que vols eliminar aquest projecte?",
+    "no_projects": "No s'han trobat projectes",
+    "total_projects": "Total de Projectes",
+    "published_projects": "Publicats",
+    "draft_projects": "Esborranys",
+    "featured_projects": "Destacats"
+  },
+  "content": {
+    "title": "Gestió de Contingut",
+    "hero_images": "Imatges Hero",
+    "testimonials": "Testimonis",
+    "content_blocks": "Blocs de Contingut",
+    "add_testimonial": "Afegir Testimoni",
+    "edit_testimonial": "Editar Testimoni",
+    "client_name": "Nom del Client",
+    "client_role": "Càrrec del Client",
+    "client_company": "Empresa del Client",
+    "testimonial_text": "Text del Testimoni",
+    "client_image": "Imatge del Client",
+    "rating": "Valoració"
+  },
+  "media": {
+    "title": "Gestió de Mitjans",
+    "upload_image": "Pujar Imatge",
+    "image_gallery": "Galeria d'Imatges",
+    "manage_files": "Gestionar Fitxers"
+  },
+  "settings": {
+    "title": "Configuració",
+    "general": "General",
+    "appearance": "Aparença",
+    "performance": "Rendiment",
+    "security": "Seguretat"
+  },
+  "users": {
+    "title": "Usuaris",
+    "manage_users": "Gestionar Usuaris",
+    "add_user": "Afegir Usuari",
+    "edit_user": "Editar Usuari"
+  }
+}

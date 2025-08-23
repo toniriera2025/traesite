@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "TONI RIERA",
+    "subtitle": "Creando lo imposible",
+    "cta_button": "Ver Mi Trabajo",
+    "scroll_down": "Desplázate Hacia Abajo",
+    "scroll_indicator": "Desplázate"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Visión Creativa",
+    "description": "Aprovechando una amplia experiencia en diseño gráfico y composición visual, creo visuales convincentes y de alta calidad como retocador creativo especializado en creación avanzada de imágenes y videos impulsada por IA.",
+    "cta_button": "Saber Más"
+  },
+  "portfolio": {
+    "title": "PORTAFOLIO",
+    "subtitle": "TRABAJOS DESTACADOS",
+    "view_project": "Ver Proyecto",
+    "view_all": "Ver Todos los Proyectos",
+    "categories": {
+      "all": "Todos",
+      "branding": "Branding",
+      "digital": "Arte Digital",
+      "photography": "Fotografía",
+      "video": "Video"
+    }
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen los Clientes",
+    "subtitle": "Testimonios de Clientes"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Trabajemos Juntos",
+    "description": "¿Listo para dar vida a tu visión? Hablemos de tu próximo proyecto."
+  },
+  "stats": {
+    "section_title": "Transformando Ideas en Realidad",
+    "projects_completed": "Proyectos Completados",
+    "happy_clients": "Clientes Satisfechos",
+    "years_experience": "Años de Experiencia",
+    "awards_won": "Premios Ganados",
+    "projects_description": "Campañas creativas llevadas a la vida",
+    "clients_description": "Agencias y marcas en todo el mundo"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "TONI RIERA",
+    "subtitle": "Creant l'impossible",
+    "cta_button": "Veure el Meu Treball",
+    "scroll_down": "Desplaça't cap Avall",
+    "scroll_indicator": "Desplaça't"
+  },
+  "about": {
+    "title": "Sobre Mi",
+    "subtitle": "Visió Creativa",
+    "description": "Aprofitant una àmplia experiència en disseny gràfic i composició visual, creo visuals convincents i d'alta qualitat com a retocador creatiu especialitzat en creació avançada d'imatges i vídeos impulsada per IA.",
+    "cta_button": "Saber Més"
+  },
+  "portfolio": {
+    "title": "PORTAFOLI",
+    "subtitle": "TREBALLS DESTACATS",
+    "view_project": "Veure Projecte",
+    "view_all": "Veure Tots els Projectes",
+    "categories": {
+      "all": "Tots",
+      "branding": "Branding",
+      "digital": "Art Digital",
+      "photography": "Fotografia",
+      "video": "Vídeo"
+    }
+  },
+  "testimonials": {
+    "title": "El Que Diuen els Clients",
+    "subtitle": "Testimonis de Clients"
+  },
+  "contact": {
+    "title": "Posa't en Contacte",
+    "subtitle": "Treballem Junts",
+    "description": "Preparat per donar vida a la teva visió? Parlem del teu proper projecte."
+  },
+  "stats": {
+    "section_title": "Transformant Idees en Realitat",
+    "projects_completed": "Projectes Completats",
+    "happy_clients": "Clients Satisfets",
+    "years_experience": "Anys d'Experiència",
+    "awards_won": "Premis Guanyats",
+    "projects_description": "Campanyes creatives portades a la vida",
+    "clients_description": "Agències i marques arreu del món"
+  }
+}
