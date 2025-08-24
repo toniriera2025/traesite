@@ -143,7 +143,7 @@ export function PortfolioPage() {
                     
                     <div className="flex flex-wrap items-center gap-4 mb-8">
                       {project.category && (
-                        <span className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 text-purple-300 px-6 py-3 rounded-full text-lg font-medium">
+                        <span className="text-purple-300 text-lg font-medium">
                           {project.category}
                         </span>
                       )}
@@ -153,10 +153,10 @@ export function PortfolioPage() {
                         </span>
                       )}
                       {/* Media Type Badge */}
-                      <span className={`flex items-center gap-1 px-3 py-2 rounded-full text-sm font-medium ${
+                      <span className={`flex items-center gap-1 text-sm font-medium ${
                         mediaType === 'video'
-                          ? 'bg-red-600/20 text-red-300 border border-red-500/30'
-                          : 'bg-blue-600/20 text-blue-300 border border-blue-500/30'
+                          ? 'text-red-300'
+                          : 'text-blue-300'
                       }`}>
                         {mediaType === 'video' ? (
                           <Video className="w-3 h-3" />
