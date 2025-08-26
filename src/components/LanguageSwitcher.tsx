@@ -30,11 +30,10 @@ const LanguageSwitcher: React.FC = () => {
     try {
       await changeLanguage(languageCode);
       setIsOpen(false);
-      // Update URL to reflect language change
-      const currentPath = window.location.pathname;
-      const pathWithoutLang = currentPath.replace(/^\/(en|es|ca)(\/|$)/, '/');
-      const newPath = languageCode === 'en' ? pathWithoutLang : `/${languageCode}${pathWithoutLang}`;
-      window.history.pushState({}, '', newPath);
+      
+      // Force a page reload to ensure all components re-render with new language
+      // This is more reliable than trying to invalidate queries selectively
+      window.location.reload();
     } catch (error) {
       console.error('Failed to change language:', error);
     }

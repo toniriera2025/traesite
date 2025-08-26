@@ -8,7 +8,8 @@ import {
   Settings,
   Users,
   ImageIcon,
-  Globe
+  Globe,
+  User
 } from 'lucide-react'
 
 const navigation = [
@@ -17,6 +18,7 @@ const navigation = [
   { name: 'Projects', href: '/admin/projects', icon: FolderOpen },
   { name: 'Multilingual Projects', href: '/admin/multilingual-projects', icon: Globe },
   { name: 'Hero Images', href: '/admin/hero-images', icon: Image },
+  { name: 'Personal Photo', href: '/admin/personal-photo', icon: User },
   { name: 'Testimonials', href: '/admin/testimonials', icon: MessageSquare },
   { name: 'Image Gallery', href: '/admin/gallery', icon: ImageIcon },
   { name: 'SEO Settings', href: '/admin/seo', icon: Settings },

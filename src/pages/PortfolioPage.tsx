@@ -14,8 +14,11 @@ export function PortfolioPage() {
     return project.youtube_video_id ? 'video' : 'image'
   }
   
-  // Update page meta tags
+  // Update page meta tags and scroll to top
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    
     if (seoSettings) {
       document.title = seoSettings.title || 'Portfolio | TONI RIERA'
       
@@ -143,7 +146,7 @@ export function PortfolioPage() {
                     
                     <div className="flex flex-wrap items-center gap-4 mb-8">
                       {project.category && (
-                        <span className="text-purple-300 text-lg font-medium">
+                        <span className="text-purple-400 text-lg font-medium">
                           {project.category}
                         </span>
                       )}

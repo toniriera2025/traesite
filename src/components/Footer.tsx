@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const { t } = useTranslation('common')
   
   return (
     <footer className="bg-black border-t border-purple-500/20 relative overflow-hidden">
@@ -16,41 +18,41 @@ export function Footer() {
               TONI RIERA
             </h3>
             <p className="text-purple-200 text-lg leading-relaxed">
-              Creating the impossible. Where wild ideas become stunning visual realities through advanced AI-driven image and video creation.
+              {t('footer.brand_description')}
             </p>
           </div>
           
           {/* Navigation */}
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-white">Navigation</h4>
+            <h4 className="text-xl font-semibold mb-6 text-white">{t('footer.navigation_title')}</h4>
             <nav className="space-y-4">
-              <Link to="/" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg">
-                Home
+              <Link to="/" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg py-2 px-1 rounded-md hover:bg-purple-500/10 touch-manipulation">
+                {t('footer.home')}
               </Link>
-              <Link to="/about" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg">
-                About
+              <Link to="/about" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg py-2 px-1 rounded-md hover:bg-purple-500/10 touch-manipulation">
+                {t('footer.about')}
               </Link>
-              <Link to="/portfolio" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg">
-                Portfolio
+              <Link to="/portfolio" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg py-2 px-1 rounded-md hover:bg-purple-500/10 touch-manipulation">
+                {t('footer.portfolio')}
               </Link>
-              <Link to="/contact" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg">
-                Contact
+              <Link to="/contact" className="block text-purple-300 hover:text-purple-400 transition-colors duration-300 text-lg py-2 px-1 rounded-md hover:bg-purple-500/10 touch-manipulation">
+                {t('footer.contact')}
               </Link>
             </nav>
           </div>
           
           {/* Contact */}
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-white">Ready to Create?</h4>
+            <h4 className="text-xl font-semibold mb-6 text-white">{t('footer.cta_title')}</h4>
             <div className="space-y-6">
               <p className="text-purple-200 text-lg leading-relaxed">
-                Let's bring your impossible ideas to life with cutting-edge AI visual creation.
+                {t('footer.cta_description')}
               </p>
               <Link 
                 to="/contact" 
-                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 text-lg"
+                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 text-lg touch-manipulation min-h-[48px] flex items-center justify-center"
               >
-                Get in Touch
+                {t('footer.cta_button')}
               </Link>
             </div>
           </div>
@@ -59,10 +61,10 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-purple-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-purple-400 text-lg">
-              &copy; {currentYear} Toni Riera. All rights reserved.
+              &copy; {currentYear} Toni Riera. {t('footer.copyright')}
             </p>
             <div className="flex items-center space-x-2 text-purple-400">
-              <span>Powered by AI-driven creativity</span>
+              <span>{t('footer.powered_by')}</span>
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
             </div>
           </div>

@@ -1205,3 +1205,172 @@ export function useSEOInsights() {
     }
   })
 }
+
+// Personal Photos hooks
+export interface PersonalPhoto {
+  id: string
+  image_url: string
+  alt_text: string | null
+  description: string | null
+  is_active: boolean
+  created_at: string
+  updated_at: string
+}
+
+export function usePersonalPhoto() {
+  return useQuery({
+    queryKey: ['personal-photo'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('personal_photos')
+        .select('*')
+        .eq('is_active', true)
+        .maybeSingle()
+        
+      if (error) throw error
+      return data as PersonalPhoto | null
+    }
+  })
+}
+
+export function useAllPersonalPhotos() {
+  return useQuery({
+    queryKey: ['all-personal-photos'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('personal_photos')
+        .select('*')
+        .order('created_at', { ascending: false })
+        
+      if (error) throw error
+      return data as PersonalPhoto[]
+    }
+  })
+}
+
+export function useCreatePersonalPhoto() {
+  const queryClient = useQueryClient()
+  
+  return useMutation({
+    mutationFn: async (photoData: {
+      image_url: string
+      alt_text?: string
+      description?: string
+    }) => {
+      // First, deactivate all existing photos
+      await supabase
+        .from('personal_photos')
+        .update({ is_active: false })
+        .eq('is_active', true)
+      
+      // Then create the new photo as active
+      const { data, error } = await supabase
+        .from('personal_photos')
+        .insert({
+          ...photoData,
+          is_active: true
+        })
+        .select()
+        .single()
+        
+      if (error) throw error
+      return data as PersonalPhoto
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['personal-photo'] })
+      queryClient.invalidateQueries({ queryKey: ['all-personal-photos'] })
+      toast.success('Personal photo uploaded successfully')
+    },
+    onError: (error: any) => {
+      toast.error(error.message || 'Failed to upload personal photo')
+    }
+  })
+}
+
+export function useUpdatePersonalPhoto() {
+  const queryClient = useQueryClient()
+  
+  return useMutation({
+    mutationFn: async ({ id, ...updates }: {
+      id: string
+      image_url?: string
+      alt_text?: string
+      description?: string
+    }) => {
+      const { data, error } = await supabase
+        .from('personal_photos')
+        .update({ ...updates, updated_at: new Date().toISOString() })
+        .eq('id', id)
+        .select()
+        .single()
+        
+      if (error) throw error
+      return data as PersonalPhoto
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['personal-photo'] })
+      queryClient.invalidateQueries({ queryKey: ['all-personal-photos'] })
+      toast.success('Personal photo updated successfully')
+    },
+    onError: (error: any) => {
+      toast.error(error.message || 'Failed to update personal photo')
+    }
+  })
+}
+
+export function useSetActivePersonalPhoto() {
+  const queryClient = useQueryClient()
+  
+  return useMutation({
+    mutationFn: async (photoId: string) => {
+      // First, deactivate all photos
+      await supabase
+        .from('personal_photos')
+        .update({ is_active: false })
+        .eq('is_active', true)
+      
+      // Then activate the selected photo
+      const { data, error } = await supabase
+        .from('personal_photos')
+        .update({ is_active: true, updated_at: new Date().toISOString() })
+        .eq('id', photoId)
+        .select()
+        .single()
+        
+      if (error) throw error
+      return data as PersonalPhoto
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['personal-photo'] })
+      queryClient.invalidateQueries({ queryKey: ['all-personal-photos'] })
+      toast.success('Active personal photo updated successfully')
+    },
+    onError: (error: any) => {
+      toast.error(error.message || 'Failed to set active personal photo')
+    }
+  })
+}
+
+export function useDeletePersonalPhoto() {
+  const queryClient = useQueryClient()
+  
+  return useMutation({
+    mutationFn: async (photoId: string) => {
+      const { error } = await supabase
+        .from('personal_photos')
+        .delete()
+        .eq('id', photoId)
+        
+      if (error) throw error
+      return photoId
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['personal-photo'] })
+      queryClient.invalidateQueries({ queryKey: ['all-personal-photos'] })
+      toast.success('Personal photo deleted successfully')
+    },
+    onError: (error: any) => {
+      toast.error(error.message || 'Failed to delete personal photo')
+    }
+  })
+}

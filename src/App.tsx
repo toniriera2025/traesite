@@ -17,6 +17,7 @@ import { AdminDashboard } from '@/pages/admin/AdminDashboard'
 import { AdminContentPage } from '@/pages/admin/AdminContentPage'
 import { AdminProjectsPage } from '@/pages/admin/AdminProjectsPage'
 import { AdminHeroImagesPage } from '@/pages/admin/AdminHeroImagesPage'
+import AdminPersonalPhotoPage from '@/pages/admin/AdminPersonalPhotoPage'
 import { AdminTestimonialsPage } from '@/pages/admin/AdminTestimonialsPage'
 import { AdminSEOPage } from '@/pages/admin/AdminSEOPage'
 import AdminGalleryPage from '@/pages/admin/AdminGalleryPage'
@@ -56,6 +57,7 @@ function App() {
                 <Route path="projects" element={<AdminProjectsPage />} />
                 <Route path="multilingual-projects" element={<MultilingualProjectsPage />} />
                 <Route path="hero-images" element={<AdminHeroImagesPage />} />
+                <Route path="personal-photo" element={<AdminPersonalPhotoPage />} />
                 <Route path="testimonials" element={<AdminTestimonialsPage />} />
                 <Route path="gallery" element={<AdminGalleryPage />} />
                 <Route path="seo" element={<AdminSEOPage />} />

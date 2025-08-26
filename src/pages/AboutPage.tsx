@@ -1,10 +1,11 @@
-import { useContentBlock, useSEOSettings } from '@/hooks/useData'
+import { useContentBlock, useSEOSettings, usePersonalPhoto } from '@/hooks/useData'
 import { useEffect } from 'react'
 
 export function AboutPage() {
   const { data: aboutTitle } = useContentBlock('about_title')
   const { data: aboutContent } = useContentBlock('about_content')
   const { data: seoSettings } = useSEOSettings('/about')
+  const { data: personalPhoto } = usePersonalPhoto()
   
   // Update page meta tags
   useEffect(() => {
@@ -37,6 +38,26 @@ export function AboutPage() {
         
         {/* Content */}
         <div className="max-w-none">
+          {/* Personal Photo */}
+          <div className="flex justify-center mb-16">
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-75 blur"></div>
+              <img
+                src={personalPhoto?.image_url || "/images/toni-riera-photo.jpeg"}
+                alt={personalPhoto?.alt_text || "Toni Riera"}
+                className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-black shadow-2xl"
+                onError={(e) => {
+                  // Fallback to static image if dynamic image fails to load
+                  const target = e.target as HTMLImageElement
+                  if (target.src !== "/images/toni-riera-photo.jpeg") {
+                    target.src = "/images/toni-riera-photo.jpeg"
+                    target.alt = "Toni Riera"
+                  }
+                }}
+              />
+            </div>
+          </div>
+          
           <p className="text-2xl md:text-3xl text-purple-200 leading-relaxed mb-16 text-center font-light">
             {aboutContent?.content || 
               'Leveraging extensive experience in graphic design and visual composition, I craft compelling, high-quality visuals as a creative retoucher specialized in advanced AI-driven image and video creation.'}

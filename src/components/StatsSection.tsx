@@ -30,7 +30,7 @@ export function StatsSection() {
       description: t('stats.projects_description')
     },
     {
-      number: '15+',
+      number: '40+',
       label: t('stats.happy_clients'),
       description: t('stats.clients_description')
     }
