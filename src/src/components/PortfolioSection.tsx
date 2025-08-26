@@ -124,7 +124,7 @@ export function PortfolioSection() {
                   
                   <div className="flex flex-wrap items-center gap-4 mb-8">
                     {project.category && (
-                      <span className="text-purple-300 text-lg font-medium">
+                      <span className="text-purple-400 text-lg font-medium">
                         {project.category}
                       </span>
                     )}

@@ -1,15 +1,18 @@
 {
-  "name": "react_repo",
+  "name": "toni-riera-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Professional creative portfolio website with comprehensive admin panel and personal photo management system",
+  "keywords": ["portfolio", "creative", "admin-panel", "multilingual", "react", "supabase"],
+  "author": "MiniMax Agent",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "tsc -b && vite build",
-  "build:prod": "tsc -b && BUILD_MODE=prod vite build",
-  "lint": "eslint .",
-  "preview": "vite preview"
-},
+  "scripts": {
+    "dev": "yes | pnpm install && vite",
+    "build": "yes | pnpm install && rm -rf node_modules/.vite-temp && tsc -b && vite build",
+    "build:prod": "yes | pnpm install && rm -rf node_modules/.vite-temp && tsc -b && BUILD_MODE=prod vite build",
+    "lint": "yes | pnpm install && eslint .",
+    "preview": "yes | pnpm install && vite preview"
+  },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.10.0",
